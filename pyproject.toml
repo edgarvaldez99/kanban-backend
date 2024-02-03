@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "kanban-backend"
+version = "0.0.0"
+description = ""
+authors = ["Misael Valdez <misaellvz@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "kanban_backend"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.1"
+djangorestframework = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
