@@ -27,6 +27,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
     TokenVerifyView,
 )
+from user.views import UserByTokenView
 from user.routes import router as user
 from kanban.routes import router as kanban
 
@@ -39,6 +40,7 @@ urlpatterns = [
         name="swagger-ui",
     ),
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/token/user/", UserByTokenView.as_view(), name="token_user"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/token/verify/", TokenVerifyView.as_view(), name="token_verify"),
     path("docs/redoc/", SpectacularRedocView.as_view(url_name="docs"), name="redoc"),
